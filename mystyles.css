@@ -58,9 +58,23 @@ span{
 }
 
 @media (max-width: 768px){
-    h1, h2{
+    
+    header{
         display: flex;
         justify-content: center;
+    }
+
+    h1{
+        margin-left:  0px;
+    }
+
+    #pie-logo{
+        all: unset;
+        width: 70px;
+    }
+
+    h2{
+        text-align: center;
         margin-left:  0px;
     }
 
