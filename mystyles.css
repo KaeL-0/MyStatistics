@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    margin-left: 35%;
+    font-size: 25px;
+}
+
+#line-header{
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+#ph-flag{
+    width: 300px;
+    height: auto;
+    position: fixed;
+    top: 15%;
+    left: 65%;
+    opacity: 0.7;
+}
+
+.container{
+    display: flex;
+    margin-left: 25%;    
+    flex-direction: column;
+}
+
+h2{
+    color: rgb(120, 120, 120);
+    font-weight: 100;
+    font-size: 20px;
+    
+}
+
+pre{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 17px;
+}
+
+span{
+    color: black;
+    font-weight: bold;
+}
