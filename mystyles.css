@@ -50,7 +50,7 @@ span{
 }
 
 @media (max-width: 768px){
-    h1{
+    h1, h2{
         display: flex;
         justify-content: center;
         margin-left:  0px;
@@ -69,6 +69,6 @@ span{
         position: fixed;
         top: 15%;
         left: 50%;
-        opacity: 0.7;
+        opacity: 0.4;
     }
 }
