@@ -71,6 +71,7 @@ span{
     #pie-logo{
         all: unset;
         width: 70px;
+        height: auto;
     }
 
     h2{
