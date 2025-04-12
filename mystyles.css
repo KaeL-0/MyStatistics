@@ -11,6 +11,14 @@ h1{
     font-size: 25px;
 }
 
+#pie-logo{
+    width: 70px;
+    height: auto;
+    position: fixed;
+    top: 1.5%;
+    left: 31%;
+}
+
 #line-header{
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
