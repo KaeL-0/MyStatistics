@@ -7,16 +7,20 @@ h1, h2, h3 {
 }
 
 h1{
+    display: flex;
     margin-left: 35%;
+    width: auto;
+}
+
+h1 span{
     font-size: 25px;
+    margin-top: 5px;
 }
 
 #pie-logo{
+    display: inline;
     width: 70px;
     height: auto;
-    position: fixed;
-    top: 1.5%;
-    left: 31%;
 }
 
 #line-header{
@@ -58,19 +62,14 @@ span{
 }
 
 @media (max-width: 768px){
-    
-    header{
-        display: flex;
-        justify-content: center;
-    }
 
     h1{
+        display: flex;
+        justify-content: center;
         margin-left:  0px;
     }
 
-    #pie-logo{
-        position: relative;
-    }
+
 
     h2{
         text-align: center;
