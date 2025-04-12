@@ -48,3 +48,27 @@ span{
     color: black;
     font-weight: bold;
 }
+
+@media (max-width: 768px){
+    h1{
+        display: flex;
+        justify-content: center;
+        margin-left:  0px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;    
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    #ph-flag{
+        width: 300px;
+        height: auto;
+        position: fixed;
+        top: 15%;
+        left: 50%;
+        opacity: 0.7;
+    }
+}
