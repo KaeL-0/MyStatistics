@@ -121,11 +121,15 @@ ul ul {
     }
 
     #data-source{
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     #data-source-text{
         width: 400px;
+    }
+
+    #assumptions{
+        margin-left: 10px;
     }
 
     #ph-flag{
