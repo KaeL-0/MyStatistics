@@ -40,7 +40,14 @@ h1 span{
 
 .container{
     display: flex;
-    margin-left: 25%;    
+    margin-left: 25%;   
+    margin-bottom: 50px; 
+    flex-direction: column;
+}
+
+.container-info{
+    display: flex;
+    margin-left: 25%;   
     flex-direction: column;
 }
 
@@ -60,6 +67,23 @@ span{
     color: black;
     font-weight: bold;
 }
+
+li{
+    margin-bottom: 2px;
+}
+
+#assumptions li{
+    margin-bottom: 8px;
+}
+
+ul ul {
+    margin-top: 6px;
+    padding-left: 20px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
 
 @media (max-width: 768px){
 
@@ -91,4 +115,6 @@ span{
         left: 50%;
         opacity: 0.4;
     }
+
+
 }
