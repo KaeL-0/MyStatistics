@@ -78,7 +78,7 @@ li{
 }
 
 #assumptions li{
-    width: 500px;
+    max-width: 450px;
     margin-bottom: 8px;
 }
 
@@ -115,7 +115,6 @@ ul ul {
         justify-content: center;    
         margin-left: 0px;
         font-size: 14px;
-        width: 400px;
     }
 
     .container-info h2{
@@ -127,7 +126,12 @@ ul ul {
     }
 
     #data-source-text{
-        font-size: 14px;
+        width: 400px;
+    }
+
+    #assumptions li{
+        max-width: 400px;
+        margin-bottom: 8px;
     }
 
     #ph-flag{
