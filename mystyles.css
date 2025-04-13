@@ -115,6 +115,7 @@ ul ul {
         justify-content: center;    
         margin-left: 0px;
         font-size: 14px;
+        width: 400px;
     }
 
     .container-info h2{
@@ -126,11 +127,7 @@ ul ul {
     }
 
     #data-source-text{
-        width: 400px;
-    }
-
-    #assumptions{
-        width: 400px;
+        font-size: 14px;
     }
 
     #ph-flag{
