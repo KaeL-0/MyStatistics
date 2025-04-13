@@ -113,6 +113,11 @@ ul ul {
     .container-info{
         justify-content: center;    
         margin-left: 0px;
+        font-size: 10px;
+    }
+
+    .container-info h2{
+        font-size: 20px;
     }
 
     #data-source{
