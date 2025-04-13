@@ -51,7 +51,7 @@ h1 span{
     flex-direction: column;
 }
 
-#data-source{
+#data-source-text{
     width: 650px;
     margin-bottom: 0px;
 }
@@ -113,7 +113,7 @@ ul ul {
     .container-info{
         justify-content: center;    
         margin-left: 0px;
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .container-info h2{
@@ -121,6 +121,10 @@ ul ul {
     }
 
     #data-source{
+        margin-left: 40px;
+    }
+
+    #data-source-text{
         width: 400px;
     }
 
