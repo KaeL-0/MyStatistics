@@ -101,9 +101,12 @@ ul ul {
     }
 
     .container{
-        display: flex;
         justify-content: center;    
-        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .container-info{
+        justify-content: center;    
         margin-left: 0px;
     }
 
