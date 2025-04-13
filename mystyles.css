@@ -78,6 +78,7 @@ li{
 }
 
 #assumptions li{
+    width: 500px;
     margin-bottom: 8px;
 }
 
@@ -125,6 +126,10 @@ ul ul {
     }
 
     #data-source-text{
+        width: 400px;
+    }
+
+    #assumptions{
         width: 400px;
     }
 
