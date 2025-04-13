@@ -53,6 +53,7 @@ h1 span{
 
 #data-source{
     width: 650px;
+    margin-bottom: 0px;
 }
 
 h2{
@@ -126,8 +127,5 @@ ul ul {
         left: 50%;
         opacity: 0.4;
     }
-
-
-
 
 }
