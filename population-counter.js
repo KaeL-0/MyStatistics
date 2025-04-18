@@ -32,11 +32,17 @@ function updateStats() {
 }
 
 function updateValue(id, newVal) {
-  const el = document.getElementById(id);
-  const currentVal = el.textContent.replace(/,/g, '');
+  let el = document.getElementById(id);
+  let currentVal = el.textContent.replace(/,/g, '');
   if (parseInt(currentVal) !== newVal) {
     el.textContent = newVal.toLocaleString();
-    const parent = el.closest('pre');
+    let parent;
+    if(window.innerWidth <= 768){
+      parent = el.closest('span');
+    } else {
+      parent = el.closest('pre');
+    }
+    
     if (parent) {
       parent.classList.remove('updated'); // restart animation
       void parent.offsetWidth; // force reflow

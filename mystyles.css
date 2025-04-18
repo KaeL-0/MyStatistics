@@ -147,11 +147,6 @@ ul ul {
         max-width: 0px;
       }
 
-    .updated {
-        animation: pulse 1.5s ease;
-        max-width: 300px;
-      }
-
     .container{
         justify-content: center;    
         margin-left: 0px;
