@@ -1,8 +1,11 @@
-html, body {
-    height: 100%;     /* Ensures full page height */
-    margin: 0;        /* Removes any default margin */
-    padding: 0;       /* Removes any default padding */
-    width: 100%;      /* Ensures the body and html take the full width */
+
+@media (min-width: 769px){
+    html, body {
+        height: 100%;     /* Ensures full page height */
+        margin: 0;        /* Removes any default margin */
+        padding: 0;       /* Removes any default padding */
+        width: 100%;      /* Ensures the body and html take the full width */
+    }
 }
 
 body {
