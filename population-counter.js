@@ -5,6 +5,8 @@ let birthsPerSec = 7725 / 86400;
 let deathsPerSec = 2158 / 86400;
 let migrationPerSec = -468 / 86400;
 
+let previousPopulation = startPopulation;
+
 function updateStats() {
   let now = new Date();
   let secondsElapsed = Math.floor((now - startDate) / 1000);
@@ -21,35 +23,45 @@ function updateStats() {
   let deathsToday = Math.floor(deathsPerSec * secondsToday);
   let migrationToday = Math.floor(migrationPerSec * secondsToday);
 
-  // Update HTML
-  updateValue("population", currentPop);
-  updateValue("birthsYear", birthsYear);
-  updateValue("deathsYear", deathsYear);
-  updateValue("migrationYear", migrationYear);
-  updateValue("birthsToday", birthsToday);
-  updateValue("deathsToday", deathsToday);
-  updateValue("migrationToday", migrationToday);
+  updateValue("population", currentPop, currentPop < previousPopulation);
+  updateValue("birthsYear", birthsYear, false);
+  updateValue("deathsYear", deathsYear, true);  
+  updateValue("migrationYear", migrationYear, migrationYear < 0);
+  updateValue("birthsToday", birthsToday, false);
+  updateValue("deathsToday", deathsToday, true);
+  updateValue("migrationToday", migrationToday, migrationToday < 0);
+  
+  previousPopulation = currentPop;
 }
 
-function updateValue(id, newVal) {
-  let el = document.getElementById(id);
-  let currentVal = el.textContent.replace(/,/g, '');
-  if (parseInt(currentVal) !== newVal) {
-    el.textContent = newVal.toLocaleString();
+function updateValue(id, newVal, isNegative) {
+  let elem = document.getElementById(id);
+  let currentVal = elem.textContent.replace(/,/g, '');
+  
+  if (parseInt(currentVal) !== newVal || elem.textContent === "loading data....") {
+    elem.textContent = newVal.toLocaleString();
+    
     let parent;
     if(window.innerWidth <= 768){
-      parent = el.closest('span');
+      parent = elem.closest('span');
     } else {
-      parent = el.closest('pre');
+      parent = elem.closest('pre');
     }
     
     if (parent) {
-      parent.classList.remove('updated'); // restart animation
-      void parent.offsetWidth; // force reflow
-      parent.classList.add('updated');
+      parent.classList.remove('updated');
+      parent.classList.remove('updated-negative');
+      
+      void parent.offsetWidth;
+      
+      if (isNegative) {
+        parent.classList.add('updated-negative');
+      } else {
+        parent.classList.add('updated');
+      }
     }
   }
 }
 
-updateStats(); // Initial
-setInterval(updateStats, 1000); // Update every second
+updateStats(); 
+setInterval(updateStats, 1000); 

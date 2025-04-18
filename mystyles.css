@@ -31,6 +31,7 @@ h1 span{
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin: 0;
+    margin-bottom: 20px;
 }
 
 #ph-flag{
@@ -58,7 +59,12 @@ pre{
     100% { background-color: #fdfdfd; }
   }
   
-  /* Hover effect on pre blocks */
+  @keyframes pulse-negative {
+    0% { background-color: #fdfdfd; }
+    50% { background-color: #ffd6d6; }
+    100% { background-color: #fdfdfd; }
+  }
+  
   pre:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
@@ -67,16 +73,20 @@ pre{
     max-width: 450px;
   }
   
-  /* Animated update class */
   .updated {
     animation: pulse 1.5s ease;
+    max-width: 450px;
+  }
+  
+  .updated-negative {
+    animation: pulse-negative 1.5s ease;
     max-width: 450px;
   }
 
 .container{
     display: flex;
     margin-left: 25%;   
-    margin-bottom: 50px; 
+    margin-bottom: 30px; 
     flex-direction: column;
 }
 
@@ -94,7 +104,7 @@ pre{
 h2{
     color: rgb(120, 120, 120);
     font-weight: 100;
-    font-size: 20px;
+    font-size: 19px;
     
 }
 
@@ -150,7 +160,7 @@ ul ul {
     .container{
         justify-content: center;    
         margin-left: 0px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
     .container-info{
