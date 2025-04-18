@@ -6,11 +6,6 @@
         padding: 0;       /* Removes any default padding */
         width: 100%;      /* Ensures the body and html take the full width */
     }
-
-    h1{
-        margin: 0px;
-        padding: 21.440px;
-    }
 }
 
 body {
@@ -27,6 +22,8 @@ body {
 
 h1{
     display: flex;
+    margin: 0px;
+    padding: 21.440px;
     padding-left: 35%;
     width: auto;
 }
@@ -154,7 +151,10 @@ ul ul {
 @media (max-width: 768px){
     h1{
         display: flex;
-        margin-left:  13px;
+        padding: 0px;
+        padding-left:  13px;
+        margin-top: 21.440px;
+        margin-bottom: 21.440px;
     }
 
     h2{
