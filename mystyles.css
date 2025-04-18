@@ -119,58 +119,63 @@ body {
     margin-bottom: 0;
   }
   
-  @media (max-width: 768px) {
-    h1 {
-      margin-left: 13px;
+@media (max-width: 768px){
+    h1{
+        display: flex;
+        margin-left:  13px;
     }
-  
-    h2 {
-      text-align: center;
-      margin: 0 0 40px;
-      font-size: 1.25rem;
+
+    h2{
+        text-align: center;
+        margin-left:  0px;
+        margin-bottom: 40px;
     }
-  
-    pre {
-      font-size: 0.9375rem; /* 15px */
-      max-width: 100%;
+
+    
+    pre{
+        font-size: 15px;
     }
-  
-    .container {
-      justify-content: center;
-      margin-left: 0;
-      margin-bottom: 60px;
+
+    pre:hover {
+        max-width: 0px;
+      }
+
+    .container{
+        justify-content: center;    
+        margin-left: 0px;
+        margin-bottom: 60px;
     }
-  
-    .container-info {
-      justify-content: center;
-      margin-left: 0;
-      font-size: 0.875rem; /* 14px */
+
+    .container-info{
+        justify-content: center;    
+        margin-left: 0px;
+        font-size: 14px;
     }
-  
-    .container-info h2 {
-      font-size: 1.25rem;
+
+    .container-info h2{
+        font-size: 20px;
     }
-  
-    #data-source {
-      margin-left: 10px;
+
+    #data-source{
+        margin-left: 10px;
     }
-  
-    #data-source-text {
-      width: 400px;
+
+    #data-source-text{
+        width: 400px;
     }
-  
-    #assumptions li {
-      max-width: 400px;
-      margin-bottom: 8px;
+
+    #assumptions li{
+        max-width: 400px;
+        margin-bottom: 8px;
     }
-  
-    #ph-flag {
-      width: 300px;
-      height: auto;
-      position: fixed;
-      top: 15%;
-      left: 50%;
-      opacity: 0.4;
+
+    #ph-flag{
+        width: 300px;
+        height: auto;
+        position: fixed;
+        top: 15%;
+        left: 50%;
+        opacity: 0.4;
     }
-  }
-  
+
+}
