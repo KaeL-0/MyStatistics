@@ -128,7 +128,7 @@ ul ul {
 
 @media (max-width: 768px){
     h1{
-        display: block;
+        display: flex;
         margin-left:  0px;
     }
 
@@ -137,6 +137,7 @@ ul ul {
         margin-left:  0px;
         margin-bottom: 40px;
     }
+
     
     pre{
         font-size: 15px;
