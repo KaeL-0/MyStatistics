@@ -6,6 +6,11 @@
         padding: 0;       /* Removes any default padding */
         width: 100%;      /* Ensures the body and html take the full width */
     }
+
+    h1{
+        margin: 0px;
+        padding: 21.440px;
+    }
 }
 
 body {
@@ -22,8 +27,6 @@ body {
 
 h1{
     display: flex;
-    margin: 0px;
-    padding: 21.440px;
     padding-left: 35%;
     width: auto;
 }
