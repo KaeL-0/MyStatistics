@@ -22,13 +22,27 @@ function updateStats() {
   let migrationToday = Math.floor(migrationPerSec * secondsToday);
 
   // Update HTML
-  document.getElementById("population").textContent = currentPop.toLocaleString();
-  document.getElementById("birthsYear").textContent = birthsYear.toLocaleString();
-  document.getElementById("deathsYear").textContent = deathsYear.toLocaleString();
-  document.getElementById("migrationYear").textContent = migrationYear.toLocaleString();
-  document.getElementById("birthsToday").textContent = birthsToday.toLocaleString();
-  document.getElementById("deathsToday").textContent = deathsToday.toLocaleString();
-  document.getElementById("migrationToday").textContent = migrationToday.toLocaleString();
+  updateValue("population", currentPop);
+  updateValue("birthsYear", birthsYear);
+  updateValue("deathsYear", deathsYear);
+  updateValue("migrationYear", migrationYear);
+  updateValue("birthsToday", birthsToday);
+  updateValue("deathsToday", deathsToday);
+  updateValue("migrationToday", migrationToday);
+}
+
+function updateValue(id, newVal) {
+  const el = document.getElementById(id);
+  const currentVal = el.textContent.replace(/,/g, '');
+  if (parseInt(currentVal) !== newVal) {
+    el.textContent = newVal.toLocaleString();
+    const parent = el.closest('pre');
+    if (parent) {
+      parent.classList.remove('updated'); // restart animation
+      void parent.offsetWidth; // force reflow
+      parent.classList.add('updated');
+    }
+  }
 }
 
 updateStats(); // Initial

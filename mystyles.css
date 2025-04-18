@@ -1,10 +1,14 @@
 body {
-    font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-}
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+  }
 
 h1{
     display: flex;
@@ -37,6 +41,38 @@ h1 span{
     left: 65%;
     opacity: 0.7;
 }
+
+pre{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.6rem;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    line-height: 0.5;
+    overflow-x: auto;
+  }
+
+  @keyframes pulse {
+    0% { background-color: #fdfdfd; }
+    50% { background-color: #d0f0d5; }
+    100% { background-color: #fdfdfd; }
+  }
+  
+  /* Hover effect on pre blocks */
+  pre:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease-in-out;
+    background-color: #f0f0f0;
+    max-width: 450px;
+  }
+  
+  /* Animated update class */
+  .updated {
+    animation: pulse 1.5s ease;
+    max-width: 450px;
+  }
 
 .container{
     display: flex;
