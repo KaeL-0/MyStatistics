@@ -128,16 +128,15 @@ ul ul {
 
 @media (max-width: 768px){
     h1{
-        display: flex;
-        justify-content: center;
+        display: block;
         margin-left:  0px;
     }
 
     h2{
         text-align: center;
         margin-left:  0px;
+        margin-bottom: 40px;
     }
-
     
     pre{
         font-size: 15px;
@@ -150,6 +149,7 @@ ul ul {
     .container{
         justify-content: center;    
         margin-left: 0px;
+        margin-bottom: 60px;
     }
 
     .container-info{
