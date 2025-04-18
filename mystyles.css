@@ -140,18 +140,17 @@ ul ul {
 
     
     pre{
-        font-size: 16px;
+        font-size: 15px;
     }
 
     pre:hover {
-        max-width: 300px;
+        max-width: 0px;
       }
 
     .updated {
         animation: pulse 1.5s ease;
         max-width: 300px;
       }
-
 
     .container{
         justify-content: center;    
