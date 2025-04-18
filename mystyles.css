@@ -128,19 +128,31 @@ ul ul {
   }
 
 @media (max-width: 768px){
-
     h1{
         display: flex;
         justify-content: center;
         margin-left:  0px;
     }
 
-
-
     h2{
         text-align: center;
         margin-left:  0px;
     }
+
+    pre{
+        font-size: 1rem;
+    }
+
+    pre:hover {
+        max-width: 1.2rem;
+      }
+
+    .updated {
+        animation: pulse 1.5s ease;
+        max-width: 1.2rem;
+      }
+
+    
 
     .container{
         justify-content: center;    
