@@ -9,180 +9,168 @@ body {
     font-weight: 600;
     letter-spacing: -0.5px;
   }
-
-h1{
+  
+  h1 {
     display: flex;
     margin-left: 35%;
     width: auto;
-}
-
-h1 span{
-    font-size: 25px;
-    margin-top: 5px;
-}
-
-#pie-logo{
+  }
+  
+  h1 span {
+    font-size: 1.5625rem; /* 25px */
+    margin-top: 0.3125rem; /* 5px */
+  }
+  
+  #pie-logo {
     display: inline;
     width: 70px;
     height: auto;
-}
-
-#line-header{
+  }
+  
+  #line-header {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin: 0;
-}
-
-#ph-flag{
+  }
+  
+  #ph-flag {
     width: 300px;
     height: auto;
     position: fixed;
     top: 15%;
     left: 65%;
     opacity: 0.7;
-}
-
-pre{
+  }
+  
+  pre {
     font-family: 'Source Code Pro', monospace;
-    color: #333;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.0625rem; /* 17px */
     background-color: #f9f9f9;
     padding: 1rem;
-    border-radius: 0.75rem;
-    line-height: 0.5;
+    border-radius: 12px;
+    line-height: 1.4;
     overflow-x: auto;
+    transition: all 0.2s ease-in-out;
   }
-
+  
+  pre:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    background-color: #f0f0f0;
+    max-width: 450px;
+  }
+  
+  .updated {
+    animation: pulse 1.5s ease;
+    max-width: 450px;
+  }
+  
   @keyframes pulse {
     0% { background-color: #fdfdfd; }
     50% { background-color: #d0f0d5; }
     100% { background-color: #fdfdfd; }
   }
   
-  /* Hover effect on pre blocks */
-  pre:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.2s ease-in-out;
-    background-color: #f0f0f0;
-    max-width: 450px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-bottom: 50px;
   }
   
-  /* Animated update class */
-  .updated {
-    animation: pulse 1.5s ease;
-    max-width: 450px;
+  .container-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
   }
-
-.container{
-    display: flex;
-    margin-left: 25%;   
-    margin-bottom: 50px; 
-    flex-direction: column;
-}
-
-.container-info{
-    display: flex;
-    margin-left: 25%;   
-    flex-direction: column;
-}
-
-#data-source-text{
+  
+  #data-source-text {
     width: 650px;
-    margin-bottom: 0px;
-}
-
-h2{
+    margin-bottom: 0;
+  }
+  
+  h2 {
     color: rgb(120, 120, 120);
     font-weight: 100;
-    font-size: 20px;
-    
-}
-
-pre{
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 17px;
-}
-
-span{
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  span {
     color: black;
     font-weight: bold;
-}
-
-li{
+  }
+  
+  li {
     margin-bottom: 2px;
-}
-
-#assumptions li{
+  }
+  
+  #assumptions li {
     max-width: 450px;
     margin-bottom: 8px;
-}
-
-ul ul {
+  }
+  
+  ul ul {
     margin-top: 6px;
     padding-left: 20px;
   }
-
+  
   li:last-child {
     margin-bottom: 0;
   }
-
-@media (max-width: 768px){
-    h1{
-        display: flex;
-        margin-left:  13px;
+  
+  @media (max-width: 768px) {
+    h1 {
+      margin-left: 13px;
     }
-
-    h2{
-        text-align: center;
-        margin-left:  0px;
-        margin-bottom: 40px;
+  
+    h2 {
+      text-align: center;
+      margin: 0 0 40px;
+      font-size: 1.25rem;
     }
-
-    
-    pre{
-        font-size: 15px;
+  
+    pre {
+      font-size: 0.9375rem; /* 15px */
+      max-width: 100%;
     }
-
-    pre:hover {
-        max-width: 0px;
-      }
-
-    .container{
-        justify-content: center;    
-        margin-left: 0px;
-        margin-bottom: 60px;
+  
+    .container {
+      justify-content: center;
+      margin-left: 0;
+      margin-bottom: 60px;
     }
-
-    .container-info{
-        justify-content: center;    
-        margin-left: 0px;
-        font-size: 14px;
+  
+    .container-info {
+      justify-content: center;
+      margin-left: 0;
+      font-size: 0.875rem; /* 14px */
     }
-
-    .container-info h2{
-        font-size: 20px;
+  
+    .container-info h2 {
+      font-size: 1.25rem;
     }
-
-    #data-source{
-        margin-left: 10px;
+  
+    #data-source {
+      margin-left: 10px;
     }
-
-    #data-source-text{
-        width: 400px;
+  
+    #data-source-text {
+      width: 400px;
     }
-
-    #assumptions li{
-        max-width: 400px;
-        margin-bottom: 8px;
+  
+    #assumptions li {
+      max-width: 400px;
+      margin-bottom: 8px;
     }
-
-    #ph-flag{
-        width: 300px;
-        height: auto;
-        position: fixed;
-        top: 15%;
-        left: 50%;
-        opacity: 0.4;
+  
+    #ph-flag {
+      width: 300px;
+      height: auto;
+      position: fixed;
+      top: 15%;
+      left: 50%;
+      opacity: 0.4;
     }
-
-}
+  }
+  
