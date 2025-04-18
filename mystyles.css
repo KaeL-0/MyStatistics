@@ -129,7 +129,7 @@ ul ul {
 @media (max-width: 768px){
     h1{
         display: flex;
-        margin-left:  0px;
+        margin-left:  5px;
     }
 
     h2{
