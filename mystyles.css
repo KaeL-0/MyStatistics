@@ -93,6 +93,7 @@ pre{
     border-radius: 0.75rem;
     line-height: 0.5;
     overflow-x: auto;
+    font-size: 17px;
   }
 
   @keyframes pulse {
@@ -158,10 +159,6 @@ h3 {
     margin-bottom: 12px;
 }
 
-pre{
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 17px;
-}
 
 span{
     color: black;
@@ -299,12 +296,36 @@ span{
 
 
 @media (max-width: 768px){
-    h1{
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    h1 {
         display: flex;
-        padding: 0px;
-        padding-left:  13px;
-        margin-top: 21.440px;
-        margin-bottom: 21.440px;
+        justify-content: center;
+        padding-left: 0;
+        width: 100%;
+        height: auto;
+    }
+    
+    h1 #title-logo {
+        height: 50px;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
     }
 
     h2{
@@ -313,7 +334,6 @@ span{
         margin-bottom: 40px;
     }
 
-    
     pre{
         font-size: 15px;
     }
