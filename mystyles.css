@@ -1,4 +1,3 @@
-
 @media (min-width: 769px){
     html, body {
         height: 100%;     /* Ensures full page height */
@@ -15,28 +14,59 @@ body {
     line-height: 1.6;
   }
   
-  h1, h2, h3 {
+h1, h2, h3 {
     font-weight: 600;
     letter-spacing: -0.5px;
   }
 
-h1{
+header{
     display: flex;
-    margin: 0px;
-    padding: 21.440px;
-    padding-left: 35%;
-    width: auto;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 20px;
 }
 
-h1 span{
-    font-size: 25px;
-    margin-top: 5px;
-}
-
-#pie-logo{
+h1{
     display: inline;
-    width: 70px;
-    height: auto;
+    margin: 0px;
+    padding-left: 12%;
+    width: 220px;
+    height: 70px;
+}
+
+h1 #title-logo{
+    width: auto;
+    height:  70px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+    transform: translateY(-1px);
+}
+
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
 }
 
 #line-header{
@@ -95,17 +125,18 @@ pre{
     max-width: 450px;
   }
 
-.container{
+.pop-stats-container{
     display: flex;
     margin-left: 25%;   
     margin-bottom: 30px; 
     flex-direction: column;
 }
 
-.container-info{
+.info-container{
     display: flex;
     margin-left: 25%;   
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 #data-source-text{
@@ -117,7 +148,14 @@ h2{
     color: rgb(120, 120, 120);
     font-weight: 100;
     font-size: 19px;
-    
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #444;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 pre{
@@ -130,23 +168,135 @@ span{
     font-weight: bold;
 }
 
-li{
+.info-container li{
     margin-bottom: 2px;
 }
 
-#assumptions li{
+#assumptions-text li{
     max-width: 450px;
     margin-bottom: 8px;
 }
 
-ul ul {
+.info-container ul ul {
     margin-top: 6px;
     padding-left: 20px;
   }
 
-  li:last-child {
+.info-container li:last-child {
     margin-bottom: 0;
   }
+
+.about-content, .data-source-content, .contact-content {
+    max-width: 650px;
+}
+
+.about-content ul {
+    padding-left: 20px;
+}
+
+.about-content ul li {
+    margin-bottom: 6px;
+}
+
+.data-source-content h3 {
+    margin-top: 25px;
+    color: #555;
+    font-size: 17px;
+}
+
+.data-source-content ol {
+    padding-left: 20px;
+}
+
+.data-source-content ol li {
+    margin-bottom: 8px;
+}
+
+.data-note {
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.contact-method {
+    flex: 1;
+}
+
+.social-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-links li {
+    margin-bottom: 8px;
+}
+
+.social-links a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
 
 @media (max-width: 768px){
     h1{
@@ -159,7 +309,7 @@ ul ul {
 
     h2{
         text-align: center;
-        margin-left:  0px;
+        margin-left: 0px;
         margin-bottom: 40px;
     }
 
@@ -172,19 +322,20 @@ ul ul {
         max-width: 0px;
       }
 
-    .container{
+    .pop-stats-container{
         justify-content: center;    
         margin-left: 0px;
         margin-bottom: 40px;
     }
 
-    .container-info{
+    .info-container{
         justify-content: center;    
         margin-left: 0px;
         font-size: 14px;
+        padding: 0 15px;
     }
 
-    .container-info h2{
+    .info-container h2{
         font-size: 20px;
     }
 
@@ -196,7 +347,7 @@ ul ul {
         width: 400px;
     }
 
-    #assumptions li{
+    #assumptions-text li{
         max-width: 400px;
         margin-bottom: 8px;
     }
@@ -210,4 +361,12 @@ ul ul {
         opacity: 0.4;
     }
 
+    .about-content, .data-source-content, .contact-content {
+        max-width: 100%;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

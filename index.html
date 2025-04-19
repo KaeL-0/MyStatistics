@@ -3,27 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Real-Time Philippine Population Statistics</title>
+        <title>Philippine Statistics</title>
         <link rel="icon" type="image/x-icon" href="/images/flag.png">
-        <meta name="description" content="Get real-time statistics on the Philippine population, including births, deaths, and net migration updates.">
-        <meta name="keywords" content="Philippine population, real-time statistics, births, deaths, migration, demographics">
-        <meta name="author" content="Your Name or Organization">
         
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
         <link href="mystyles.css" rel="stylesheet">
     </head>
     <body>
-
-        <h1>
-            <img id='pie-logo' src="/images/pie_logo.png">
-            <span>Philippine Statistics</span>
-        </h1>
+        <header>
+            <h1>
+                <img id ="title-logo" alt="Philippine Statistiko" src="/images/title-logo.png">
+            </h1>
+            
+            <nav>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#data-source">Data Source</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+        </header>
 
         <hr id="line-header">
         <img id='ph-flag' src="/images/ph_map.png">
 
-        <div class="container">
+        <div class="pop-stats-container" id="home">
             <h2>PHILIPPINE POPULATION</h2>
             <pre>     Current Population -> <span id="population">loading data....</span></pre>
             <pre>       Births this year -> <span id="birthsYear">loading data....</span></pre>
@@ -34,40 +40,107 @@
             <pre>    Net migration today -> <span id="migrationToday">loading data....</span></pre>
         </div>
 
-        <div class="container-info" id="data-source">
-            <h2>Data Source</h2>
-            <p id="data-source-text">The data used on this website is based on projections and estimates provided by the <strong>United Nations Department of Economic and Social Affairs: Population Division</strong>.</p>
-            <p style="margin-bottom: 0px; margin-top: 10px;">Specifically, the population statistics are derived from:</p>
-            <ul style="margin-top: 6px;">
-                <li>Philippines Population Projections for 2025 and 2026</li>
-                <li>Demographic data for 2024</li>
-                <li>Migration trends from recent years</li>         
-            </ul>
+        <div class="info-container" id="about">
+            <h2>About Philippine Statistiko</h2>
+            <div class="about-content">
+                <p>Philippine Statistiko provides real-time population statistics and demographic data for the Philippines. Our mission is to make accurate demographic information accessible to everyone—researchers, students, policymakers, and concerned citizens.</p>
+                
+                <p>This platform uses data-driven projections to visualize population changes as they happen, including:</p>
+                <ul>
+                    <li>Live population counter</li>
+                    <li>Birth and death rates</li>
+                    <li>Migration patterns</li>
+                    <li>Demographic trends</li>
+                </ul>
+                
+                <p>Whether you're conducting research, creating policy, or simply curious about population dynamics in the Philippines, our tool provides up-to-date information in an easy-to-understand format.</p>
+            </div>
         </div>
 
-        <div class="container-info">
-            <h2>Key Assumptions for 2025</h2>
-            
-            <ul id="assumptions">
-                <li><strong>Starting Population:</strong><br>The base population for the beginning of 2025 is <strong>117,734,094</strong>, as estimated on January 1, 2025.</li>
-                <li><strong>Population Growth:</strong><br>The Philippines is projected to grow by <strong>1,861,376</strong> people throughout the year, reaching <strong>119,595,470</strong> by January 1, 2026.</li>
-                <li><strong>Natural Increase:</strong>
-                    <ul>
-                        <li>Estimated live births: <strong>2,032,090</strong> more than deaths in 2025.</li>
-                        <li>Average daily births: <strong>7,725 </strong></li>
-                        <li>Average daily deaths: <strong>2,158</strong></li>
-                    </ul>                
-                </li>      
-                <li><strong>Net Migration:</strong>
-                    <ul>
-                        <li>Estimated net migration: <strong> -170,714</strong> for the year.</li>
-                        <li>Average daily emigration: <strong>-468</strong></li>
-                    </ul>                
-                </li> 
-            </ul>
+        <div class="info-container" id="data-source">
+            <h2>Data Sources & Methodology</h2>
+            <div class="data-source-content">
+                <h3>Primary Data Sources</h3>
+                <p>All statistics displayed on Philippine Statistiko are based on official data from:</p>
+                <ul>
+                    <li><strong>United Nations Department of Economic and Social Affairs: Population Division</strong>
+                        <ul>
+                            <li>World Population Prospects 2024 Revision</li>
+                            <li>International Migration Report 2023</li>
+                        </ul>
+                    </li>
+                    <li><strong>Philippine Statistics Authority (PSA)</strong>
+                        <ul>
+                            <li>Census of Population and Housing</li>
+                            <li>Civil Registration and Vital Statistics</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>Calculation Methodology</h3>
+                <p>Our real-time counters use the following approach:</p>
+                <ol>
+                    <li>Starting with base population figures for January 1, 2025</li>
+                    <li>Applying annual rates for births, deaths, and migration</li>
+                    <li>Distributing these events evenly throughout the year</li>
+                    <li>Adjusting for known seasonal variations where data is available</li>
+                </ol>
+                
+                <h3>Key Assumptions for 2025</h3>
+                <ul id="assumptions-text">
+                    <li><strong>Starting Population:</strong><br>The base population for the beginning of 2025 is <strong>117,734,094</strong>, as estimated on January 1, 2025.</li>
+                    <li><strong>Population Growth:</strong><br>The Philippines is projected to grow by <strong>1,861,376</strong> people throughout the year, reaching <strong>119,595,470</strong> by January 1, 2026.</li>
+                    <li><strong>Natural Increase:</strong>
+                        <ul>
+                            <li>Estimated live births: <strong>2,032,090</strong> more than deaths in 2025.</li>
+                            <li>Average daily births: <strong>7,725</strong></li>
+                            <li>Average daily deaths: <strong>2,158</strong></li>
+                        </ul>                
+                    </li>      
+                    <li><strong>Net Migration:</strong>
+                        <ul>
+                            <li>Estimated net migration: <strong>-170,714</strong> for the year.</li>
+                            <li>Average daily emigration: <strong>-468</strong></li>
+                        </ul>                
+                    </li> 
+                </ul>
+                
+                <p class="data-note">Note: All figures represent projections based on historical trends and demographic models. Actual population counts may vary.</p>
+            </div>
         </div>
+
+        <div class="info-container" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <p>We welcome your questions, feedback, and suggestions about Philippine Statistiko. Please reach out to us using any of the methods below:</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h3>Email</h3>
+                        <p>edman.gomez.business@gmail.com</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3>Author's Social Media</h3>
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/mikhael.edman" target="_blank">Facebook Profile</a></li>
+                            <li><a href="https://www.linkedin.com/in/mikhael-edman-p-gomez-a8806433a/" target="_blank">LinkedIn Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+
 
         <script src="population-counter.js"></script>
+
+        <script>
+            const currentPage = location.pathname.split("/").pop();
+            document.querySelectorAll("nav ul li a").forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        </script>
 
     </body>
 </html>
