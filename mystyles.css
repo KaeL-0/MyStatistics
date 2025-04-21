@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
   }
   
-h1, h2, h3 {
+h2, h3 {
     font-weight: 600;
     letter-spacing: -0.5px;
   }
@@ -306,18 +306,19 @@ footer {
         max-width: none;
       }
 
-    #ph-flag {
-        width: 180px;
-        top: auto;
-        bottom: 10%;
-        opacity: 0.3;
-    }
-
     .pop-stats-container{
         justify-content: center;    
         margin-left: 0px;
         margin-bottom: 40px;
     }
+
+    #ph-flag {
+        width: 180px;
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        opacity: 0.3;
+      }
 
     .info-container{
         justify-content: center;    
@@ -337,15 +338,6 @@ footer {
     #assumptions-text li{
         max-width: 400px;
         margin-bottom: 8px;
-    }
-
-    #ph-flag{
-        width: 300px;
-        height: auto;
-        position: fixed;
-        top: 15%;
-        left: 50%;
-        opacity: 0.4;
     }
 
     .about-content, .data-source-content, .contact-content {
